@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link  href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" type="text/css" href="main.css">
-  <style>
-  #map {
-       width: 100%;
-       height: 400px;
-       background-color: grey;
-     }
-  </style>
 </head>
 <body>
 
@@ -18,17 +12,54 @@
     <li> <a href="home.html" class="navigator_selection"> Home </a> </li>
     <li> <a href="profile.html" class="navigator_selection"> Profile </a> </li>
     <li> <a href="gallery.html" class="navigator_selection"> Gallery</a></li>
-
   </ul>
 
   <h3> Mengna's Journey</h3>
-<img src="https://2.bp.blogspot.com/-X9BnWGQTDJs/W9tNItFW2xI/AAAAAAAAARo/oLg_ghWS4EMnDuVMHfNReUw1Bd95cerNgCLcBGAs/s320/footprint.png" >
+  <div class="w3-container">
+    <div> <class="w3-bar">
+        <button class="w3-bar-item w3-button" style="width:30%" onclick="openCity('Fujian')" >Fujian</button>
+        <button class="w3-bar-item w3-button " style="width:30%" onclick="openCity('New York')">New York</button>
+        <button class="w3-bar-item w3-button" style="width:30%" onclick="openCity('Stony Brook')">Stony Brook</button>
+    </div>
+  </div>
+  <div id="Fujian" class="w3-containercity">
+    <h3>Fujian</h3>
+    <img src="http://chinaopenfuzhou.com/en/upfile/201510/2015102754006109.jpg " width="900" height="300">
+    <p> I lived in a small village, called Chaoqian, of Fujian for the first 15 years of my life.
+    It is a very small village. Small enough for people to know each other. When I say people known each other, I mean when they see you, they know who your grandmother is. The village is surrounded by mountains and rivers. I had explored almost every mountain and river with my friends.
+    Well, If you ask me, what are the unforgettable memories in this village, I would say, I almost died 3 times in the process of exploring mountains and rivers. I almost got bitten by a snake once, had fallen down from a small cliff, and nearly drowned once.
+    It was a hot day in summer. My friends and I decided to picnic near a river, which is  It could be a great day until we decided to get into the water and have some fun. By the way, we are a group of 8, and only one of us kind of know how to swim.
+    </p>
+  </div>
 
-  <ul class="personal_infor">
-    <li> Birthday: June,1st</li>
-    <li> Hobby: Reading & Writing </li>
-    <li> Favorite TV Show: Criminal Mind </li>
-  </ul>
+  <div id="New York" class="w3-containercity" >
+    <h3>New York</h3>
+    <img src="https://www.fieldwork.com/wp-content/uploads/2018/08/NYC-header-1394x475.jpg " width="900" height="300">
+    <p>NY is the capital of France.</p>
+  </div>
+
+  <div id="Stony Brook" class="w3-containercity">
+    <h3>Stony Brook</h3>
+    <img src="https://www.suny.edu/media/suny/content-assets/images/campus-profiles/pics/StonyBrook-walkway-flag.jpg" width="900" height="300" >
+    <p>SB is the capital of Japan.</p>
+  </div>
+
+
+
+
+<script>
+function openCity(cityName) {
+    var i;
+    var x = document.getElementsByClassName("w3-containercity");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    document.getElementById(cityName).style.display = "block";
+}
+
+</script>
+
+
   <h3> Mengna's Favorite Book Collection </h3>
   <p>
     WHO MOVED MY CHEESE  by Spencer Johnson
